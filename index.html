@@ -114,7 +114,19 @@ O required faz com que o campo seja obrigatório para o envio.
                     
                     <label for="mensagem">Mensagem:</label>
                     <br/>
-                    <input type="text" name="mensagem" id="mensagem">
+<!-- 
+A tag <textarea> cria uma área de texto maior,
+permitindo que o usuário digite mensagens longas (como observações ou comentários).
+Diferente do <input type="text">, que aceita apenas uma linha,
+o <textarea> aceita várias linhas de texto.
+-->
+                    <textarea             
+                        name="mensagem"
+                        id="mensagem"
+                        rows="4"
+                        cols="30"
+                        required
+                    ></textarea>
                     <br/><br/>
 <!-- 
 A tag <button> cria um botão clicavel. O atributo type indica o tipo do botão, 
