@@ -8,9 +8,12 @@
         <!-- aqui configuramos a escala (tipos de tela) em que o site vai ser 
          exibido -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Vincular/linkar o arquivo de css a nossa página -->
+        <link rel="stylesheet" href="style.css">
         <!-- titulo da pagina, exibido na guia do site -->
         <title>Quem sou eu</title> 
     </head>
+    
     <!-- a tag body é usada para trazer as informações que 
     vão aparecer dentro do site -->
     <body>
@@ -23,10 +26,23 @@
             <!-- a tag <p></p> serve para criar um paragrafo dentro da pagina -->
             <p>Uma página simples para me apresentar ao mundo!</p>
         </header>
+        
+        <!-- Navegação  -->
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#interesses">Interesses</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#redes">Redes Sociais</a></li>
+            </ul>
+        </nav>
+        
         <!-- corpo -->
         <main>
             <!-- as section's criam sessões, partição, dentro do site -->
-            <section>
+            <section id="sobre">
                 <h2>Sobre mim</h2>
                 <!-- a tag de img serve para adicionar imagens ao nosso site
                 ela vem com duas propriedades: 
