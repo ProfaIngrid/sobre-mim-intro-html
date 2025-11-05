@@ -238,8 +238,49 @@ table {
     border: 1px solid #1e293b;
     border-radius: 10px;
     background-color: #0f172a;
-    
+    /* o border collapse une as bordas da tabela */
+    border-collapse: collapse;
 }
 
+caption{
+    color: #00e5ff;
+    text-shadow: 0 0 6px #00e5ff;
+    font-weight: bold;
+    padding: 14px;
+    font-size: 1.4rem;
+}
+
+thead th{
+    background-color: #1e1b4b;
+    color: #e2e8f0;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid #1e293b;
+}
+
+tbody td{
+    padding: 10px 14px;
+    color: #94a3b8;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* 
+===================================================================================================
+RODAPÉ
+===================================================================================================
+*/
+footer{
+    text-align: center;
+    padding: 24px;
+    background: #0f172a;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+}
+
+#resposta{
+    color: #8761f7;
+    text-shadow: 0 0 10px #8761f7;
+}
 
 

@@ -104,7 +104,7 @@ isso definido deixamos como "#"
 O atributo "method" define como os dados serão enviados, o "post" é o mais comum 
 e significa que esses dados vão ser salvos em algum local
 -->
-                <form action="#">
+                <form id="form" onsubmit="enviarFormulario(event);">
 <!-- 
 A tag <label> serve para descrever o campo, ou seja, criar uma legenda
 O atributo "for" deve sempre ter o mesmo valor que o "id" do campo que ela descreve
@@ -119,9 +119,9 @@ O name é o nome da informação que vai ser enviada no formulário.
 O id é o identificador UNICO usado para vincular o campo com o <label>.
 O required faz com que o campo seja obrigatório para o envio.
 -->
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Digite seu nome" required>
                     <label for="mensagem">Mensagem:</label>
 <!-- 
 A tag <textarea> cria uma área de texto maior,
@@ -134,12 +134,14 @@ o <textarea> aceita várias linhas de texto.
                         id="mensagem"
                         rows="4"
                         cols="30"
+                        placeholder="Digite sua mensagem aqui"
                         required
                     ></textarea>
 <!-- 
 A tag <button> cria um botão clicavel. O atributo type indica o tipo do botão, 
 nesse caso o submit indica que o botão vai enviar o formulário               
--->
+--> 
+                    <p id="resposta"></p>
                     <button type="submit">Enviar mensagem</button>
                 </form>
             </section>
@@ -228,4 +230,8 @@ O href serve para acrescentar este link ao texto
             <p>Site desenvolvido pela turma de IoT01</p>
         </footer>
     </body>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="script.js"></script>
 </html>
