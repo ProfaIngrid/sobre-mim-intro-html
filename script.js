@@ -1,5 +1,5 @@
 // inicializando o emailjs com um token (public key)
-emailjs.init("XfjxcKSSSN_NYQux2");
+emailjs.init(window.env.EMAIL_PUBLIC_KEY);
 
 // função para enviar o formulário por email
 function enviarFormulario(e){
@@ -17,10 +17,15 @@ function enviarFormulario(e){
         // service_id
         // template_id
         // campos do email
-    emailjs.send("service_60hkbpd", "template_r8ejt7c", {
+    emailjs.send(window.env.EMAIL_SERVICE_ID, window.env.EMAIL_TEMPLATE_ID_ADMIN, {
         nome: nome,
         email: email,
         mensagem: mensagem
+    });
+
+    emailjs.send(window.env.EMAIL_SERVICE_ID, window.env.EMAIL_TEMPLATE_ID_REPLY, {
+        nome: nome,
+        email: email
     });
 
     // alert("Sua mensagem foi enviada com sucesso! Aguarde nosso retorno!");
